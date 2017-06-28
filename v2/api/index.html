@@ -224,22 +224,11 @@
         <div id="ad">
   <script>
     (function () {
-      var showConfPromo = Math.random() <= 0.33
-      if (showConfPromo) {
-        var c = document.createElement('div')
-        c.id = 'conf-promo'
-        c.innerHTML = '<a href="https://conf.vuejs.org" target="_blank">' +
-          '<img src="/images/conf.png" alt="vueconf">' +
-          '<span>The first VueConf EU is being held in Wrocław, Poland, June 21-23!</span>'
-        '</a>'
-        document.getElementById('ad').appendChild(c)
-      } else {
-        var s = document.createElement('script')
-        s.setAttribute('async', '')
-        s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
-        s.id = '_carbonads_js'
-        document.getElementById('ad').appendChild(s)
-      }
+      var s = document.createElement('script')
+      s.setAttribute('async', '')
+      s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
+      s.id = '_carbonads_js'
+      document.getElementById('ad').appendChild(s)
     })()
   </script>
 </div>
@@ -1407,8 +1396,10 @@
 </li>
 <li><p><strong>Modifiers:</strong></p>
 <ul>
-<li><code>.prop</code> - Bind as a DOM property instead of an attribute. (<a href="http://stackoverflow.com/questions/6003819/properties-and-attributes-in-html#answer-6004028" target="_blank" rel="external">what’s the difference?</a>)</li>
-<li><code>.camel</code> - (2.1.0+) transform the kebab-case attribute name into camelCase.</li>
+<li><p><code>.prop</code> - Bind as a DOM property instead of an attribute (<a href="http://stackoverflow.com/questions/6003819/properties-and-attributes-in-html#answer-6004028" target="_blank" rel="external">what’s the difference?</a>). If the tag is a component then <code>.prop</code> will set the property on the component’s <code>$el</code>.</p>
+</li>
+<li><p><code>.camel</code> - (2.1.0+) transform the kebab-case attribute name into camelCase.</p>
+</li>
 <li><code>.sync</code> - (2.3.0+) a syntax sugar that expands into a <code>v-on</code> handler for updating the bound value.</li>
 </ul>
 </li>

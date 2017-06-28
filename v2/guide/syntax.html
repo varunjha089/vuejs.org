@@ -592,22 +592,11 @@
         <div id="ad">
   <script>
     (function () {
-      var showConfPromo = Math.random() <= 0.33
-      if (showConfPromo) {
-        var c = document.createElement('div')
-        c.id = 'conf-promo'
-        c.innerHTML = '<a href="https://conf.vuejs.org" target="_blank">' +
-          '<img src="/images/conf.png" alt="vueconf">' +
-          '<span>The first VueConf EU is being held in Wrocław, Poland, June 21-23!</span>'
-        '</a>'
-        document.getElementById('ad').appendChild(c)
-      } else {
-        var s = document.createElement('script')
-        s.setAttribute('async', '')
-        s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
-        s.id = '_carbonads_js'
-        document.getElementById('ad').appendChild(s)
-      }
+      var s = document.createElement('script')
+      s.setAttribute('async', '')
+      s.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs'
+      s.id = '_carbonads_js'
+      document.getElementById('ad').appendChild(s)
     })()
   </script>
 </div>
@@ -633,7 +622,7 @@
 <h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><p>Mustaches cannot be used inside HTML attributes, instead use a <a href="../api/#v-bind">v-bind directive</a>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"dynamicId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>It also works for boolean attributes - the attribute will be removed if the condition evaluates to a falsy value:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-bind:disabled</span>=<span class="string">"someDynamicCondition"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-bind:disabled</span>=<span class="string">"isButtonDisabled"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="Using-JavaScript-Expressions"><a href="#Using-JavaScript-Expressions" class="headerlink" title="Using JavaScript Expressions"></a>Using JavaScript Expressions</h3><p>So far we’ve only been binding to simple property keys in our templates. But Vue.js actually supports the full power of JavaScript expressions inside all data bindings:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; number + 1 &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; ok ? 'YES' : 'NO' &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; message.split('').reverse().join('') &#125;&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"'list-' + id"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>These expressions will be evaluated as JavaScript in the data scope of the owner Vue instance. One restriction is that each binding can only contain <strong>one single expression</strong>, so the following will <strong>NOT</strong> work:</p>
