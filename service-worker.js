@@ -285,8 +285,8 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"sendgrid.sp1.convertro.com"});
-toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"ad.doubleclick.net"});
+toolbox.router.get("/*", toolbox.networkFirst, {"origin":"sendgrid.sp1.convertro.com"});
+toolbox.router.get("/*", toolbox.networkFirst, {"origin":"ad.doubleclick.net"});
 toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"cdn.jsdelivr.net"});
 toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"fonts.googleapis.com"});
 toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"fonts.gstatic.com"});
