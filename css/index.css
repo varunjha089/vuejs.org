@@ -633,6 +633,8 @@ body {
   font-size: 1.05em;
   font-weight: 600;
   letter-spacing: 0.1em;
+  min-width: 8em;
+  text-align: center;
 }
 #hero .button:first-child {
   margin-right: 1em;
