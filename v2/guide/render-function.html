@@ -747,8 +747,8 @@
 <li><code>injections</code>: (2.3.0+) if using the <a href="../api/#provide-inject"><code>inject</code></a> option, this will contain resolved injections.</li>
 </ul>
 <p>After adding <code>functional: true</code>, updating the render function of our anchored heading component would simply require adding the <code>context</code> argument, updating <code>this.$slots.default</code> to <code>context.children</code>, then updating <code>this.level</code> to <code>context.props.level</code>.</p>
-<p>Since functional components are just functions, they’re much cheaper to render. However, this also mean that functional components don’t show up in VueJS Chrome dev tools component tree.</p>
-<p>They’re also very useful as wrapper components.  For example, when you need to:</p>
+<p>Since functional components are just functions, they’re much cheaper to render. However, the lack of a persistent instance means they won’t show up in the <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">Vue devtools</a> component tree.</p>
+<p>They’re also very useful as wrapper components. For example, when you need to:</p>
 <ul>
 <li>Programmatically choose one of several other components to delegate to</li>
 <li>Manipulate children, props, or data before passing them on to a child component</li>
