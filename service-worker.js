@@ -287,7 +287,6 @@ self.addEventListener('fetch', function(event) {
 
 toolbox.router.get("/*", toolbox.networkFirst, {"origin":"sendgrid.sp1.convertro.com"});
 toolbox.router.get("/*", toolbox.networkFirst, {"origin":"ad.doubleclick.net"});
-toolbox.router.get("/*", toolbox.networkFirst, {"origin":"srv.carbonads.net"});
 toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"cdn.jsdelivr.net"});
 toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"fonts.googleapis.com"});
 toolbox.router.get("/*", toolbox.cacheFirst, {"origin":"fonts.gstatic.com"});
