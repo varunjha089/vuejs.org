@@ -1565,7 +1565,7 @@
 </li>
 </ul>
 <h2 id="Special-Attributes"><a href="#Special-Attributes" class="headerlink" title="Special Attributes"></a>Special Attributes</h2><h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><ul>
-<li><p><strong>Expects:</strong> <code>string</code></p>
+<li><p><strong>Expects:</strong> <code>number | string</code></p>
 <p>The <code>key</code> special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed.</p>
 <p>Children of the same common parent must have <strong>unique keys</strong>. Duplicate keys will cause render errors.</p>
 <p>The most common use case is combined with <code>v-for</code>:</p>
