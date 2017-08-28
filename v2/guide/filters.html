@@ -2,26 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Reactivity in Depth — Vue.js</title>
+        <title>Filters — Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/reactivity.html">
-        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/reactivity.html">
-        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/reactivity.html">
-        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/reactivity.html">
-        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/reactivity.html">
-        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/reactivity.html">
-        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/reactivity.html">
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/filters.html">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Reactivity in Depth — Vue.js">
+        <meta property="og:title" content="Filters — Vue.js">
         <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta property="og:image" content="https://vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Reactivity in Depth — Vue.js">
+        <meta name="twitter:title" content="Filters — Vue.js">
         <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="twitter:image" content="https://vuejs.org/images/logo.png">
 
@@ -93,7 +93,7 @@
   <ul class="nav-dropdown">
     <li><h4>Help</h4></li>
     <li><ul>
-      <li><a href="http://forum.vuejs.org/" class="nav-link" target="_blank">Forum</a></li>
+      <li><a href="https://forum.vuejs.org/" class="nav-link" target="_blank">Forum</a></li>
       <li><a href="https://chat.vuejs.org/" class="nav-link" target="_blank">Chat</a></li>
       <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">Templates</a></li>
     </ul></li>
@@ -122,12 +122,12 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Translations</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://cn.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">日本語</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">한국어</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
@@ -158,7 +158,7 @@
   <ul class="nav-dropdown">
     <li><h4>Help</h4></li>
     <li><ul>
-      <li><a href="http://forum.vuejs.org/" class="nav-link" target="_blank">Forum</a></li>
+      <li><a href="https://forum.vuejs.org/" class="nav-link" target="_blank">Forum</a></li>
       <li><a href="https://chat.vuejs.org/" class="nav-link" target="_blank">Chat</a></li>
       <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">Templates</a></li>
     </ul></li>
@@ -187,12 +187,12 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">Translations</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://cn.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">中文</a></li>
-    <li><a href="https://jp.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/v2/guide/reactivity.html" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://cn.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">日本語</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">한국어</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
@@ -232,6 +232,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -240,6 +243,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -256,6 +262,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -264,6 +273,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -280,6 +292,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -288,6 +303,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -304,6 +322,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -312,6 +333,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -328,6 +352,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -336,6 +363,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -352,6 +382,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -362,14 +395,17 @@
         
             
             
-                <li><h3>Advanced</h3></li>
+                <li><h3>Transitions & Animation</h3></li>
+            
+            
+            
             
             
             
         
         
         <li>
-            <a href="/v2/guide/reactivity.html" class="sidebar-link current">Reactivity in Depth</a>
+            <a href="/v2/guide/transitions.html" class="sidebar-link">Enter/Leave & List Transitions</a>
         </li>
     
         
@@ -378,10 +414,13 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/transitions.html" class="sidebar-link">Transition Effects</a>
+            <a href="/v2/guide/transitioning-state.html" class="sidebar-link">State Transitions</a>
         </li>
     
         
@@ -389,39 +428,8 @@
             
             
             
+                <li><h3>Reusability & Composition</h3></li>
             
-        
-        
-        <li>
-            <a href="/v2/guide/transitioning-state.html" class="sidebar-link">Transitioning State</a>
-        </li>
-    
-        
-        
-            
-            
-            
-            
-        
-        
-        <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render Functions</a>
-        </li>
-    
-        
-        
-            
-            
-            
-            
-        
-        
-        <li>
-            <a href="/v2/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
-        </li>
-    
-        
-        
             
             
             
@@ -438,6 +446,39 @@
             
             
             
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">Render Functions & JSX</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+            
+            
         
         
         <li>
@@ -446,6 +487,41 @@
     
         
         
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/filters.html" class="sidebar-link current">Filters</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+                <li><h3>Tooling</h3></li>
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/deployment.html" class="sidebar-link">Production Deployment</a>
+        </li>
+    
+        
+        
+            
+            
+            
             
             
             
@@ -462,15 +538,38 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/deployment.html" class="sidebar-link">Production Deployment Tips</a>
+            <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
         </li>
     
         
         
             
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+                <li><h3>Scaling Up</h3></li>
             
             
             
@@ -482,6 +581,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -498,15 +600,6 @@
             
             
             
-        
-        
-        <li>
-            <a href="/v2/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
-        </li>
-    
-        
-        
-            
             
             
             
@@ -521,15 +614,6 @@
             
             
             
-            
-        
-        
-        <li>
-            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
-        </li>
-    
-        
-        
             
             
             
@@ -548,6 +632,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -560,6 +647,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -568,6 +658,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -586,6 +679,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -594,6 +690,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -612,7 +711,7 @@
 </div>
 
 
-<div class="content guide with-sidebar reactivity-guide">
+<div class="content guide with-sidebar filters-guide">
     
       
         <div id="ad">
@@ -630,46 +729,30 @@
       
     
     
-      <h1>Reactivity in Depth</h1>
+      <h1>Filters</h1>
     
-    <p>We’ve covered most of the basics - now it’s time to take a deep dive! One of Vue’s most distinct features is the unobtrusive reactivity system. Models are just plain JavaScript objects. When you modify them, the view updates. It makes state management very simple and intuitive, but it’s also important to understand how it works to avoid some common gotchas. In this section, we are going to dig into some of the lower-level details of Vue’s reactivity system.</p>
-<h2 id="How-Changes-Are-Tracked"><a href="#How-Changes-Are-Tracked" class="headerlink" title="How Changes Are Tracked"></a>How Changes Are Tracked</h2><p>When you pass a plain JavaScript object to a Vue instance as its <code>data</code> option, Vue will walk through all of its properties and convert them to getter/setters using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="external">Object.defineProperty</a>. This is an ES5-only and un-shimmable feature, which is why Vue doesn’t support IE8 and below.</p>
-<p>The getter/setters are invisible to the user, but under the hood they enable Vue to perform dependency-tracking and change-notification when properties are accessed or modified. One caveat is that browser consoles format getter/setters differently when converted data objects are logged, so you may want to install <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a> for a more inspection-friendly interface.</p>
-<p>Every component instance has a corresponding <strong>watcher</strong> instance, which records any properties “touched” during the component’s render as dependencies. Later on when a dependency’s setter is triggered, it notifies the watcher, which in turn causes the component to re-render.</p>
-<p><img src="/images/data.png" alt="Reactivity Cycle"></p>
-<h2 id="Change-Detection-Caveats"><a href="#Change-Detection-Caveats" class="headerlink" title="Change Detection Caveats"></a>Change Detection Caveats</h2><p>Due to the limitations of modern JavaScript (and the abandonment of <code>Object.observe</code>), Vue <strong>cannot detect property addition or deletion</strong>. Since Vue performs the getter/setter conversion process during instance initialization, a property must be present in the <code>data</code> object in order for Vue to convert it and make it reactive. For example:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">a</span>: <span class="number">1</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// `vm.a` is now reactive</span></div><div class="line"></div><div class="line">vm.b = <span class="number">2</span></div><div class="line"><span class="comment">// `vm.b` is NOT reactive</span></div></pre></td></tr></table></figure>
-<p>Vue does not allow dynamically adding new root-level reactive properties to an already created instance. However, it’s possible to add reactive properties to a nested object using the <code>Vue.set(object, key, value)</code> method:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.set(vm.someObject, <span class="string">'b'</span>, <span class="number">2</span>)</div></pre></td></tr></table></figure>
-<p>You can also use the <code>vm.$set</code> instance method, which is just an alias to the global <code>Vue.set</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">this</span>.$set(<span class="keyword">this</span>.someObject, <span class="string">'b'</span>, <span class="number">2</span>)</div></pre></td></tr></table></figure>
-<p>Sometimes you may want to assign a number of properties to an existing object, for example using <code>Object.assign()</code> or <code>_.extend()</code>. However, new properties added to the object will not trigger changes. In such cases, create a fresh object with properties from both the original object and the mixin object:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// instead of `Object.assign(this.someObject, &#123; a: 1, b: 2 &#125;)`</span></div><div class="line"><span class="keyword">this</span>.someObject = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.someObject, &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;)</div></pre></td></tr></table></figure>
-<p>There are also a few array-related caveats, which were discussed earlier in the <a href="list.html#Caveats">list rendering section</a>.</p>
-<h2 id="Declaring-Reactive-Properties"><a href="#Declaring-Reactive-Properties" class="headerlink" title="Declaring Reactive Properties"></a>Declaring Reactive Properties</h2><p>Since Vue doesn’t allow dynamically adding root-level reactive properties, you have to initialize Vue instances by declaring all root-level reactive data properties upfront, even just with an empty value:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="comment">// declare message with an empty value</span></div><div class="line">    message: <span class="string">''</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;div&gt;&#123;&#123; message &#125;&#125;&lt;/div&gt;'</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// set `message` later</span></div><div class="line">vm.message = <span class="string">'Hello!'</span></div></pre></td></tr></table></figure>
-<p>If you don’t declare <code>message</code> in the data option, Vue will warn you that the render function is trying to access a property that doesn’t exist.</p>
-<p>There are technical reasons behind this restriction - it eliminates a class of edge cases in the dependency tracking system, and also makes Vue instances play nicer with type checking systems. But there is also an important consideration in terms of code maintainability: the <code>data</code> object is like the schema for your component’s state. Declaring all reactive properties upfront makes the component code easier to understand when revisited later or read by another developer.</p>
-<h2 id="Async-Update-Queue"><a href="#Async-Update-Queue" class="headerlink" title="Async Update Queue"></a>Async Update Queue</h2><p>In case you haven’t noticed yet, Vue performs DOM updates <strong>asynchronously</strong>. Whenever a data change is observed, it will open a queue and buffer all the data changes that happen in the same event loop. If the same watcher is triggered multiple times, it will be pushed into the queue only once. This buffered de-duplication is important in avoiding unnecessary calculations and DOM manipulations. Then, in the next event loop “tick”, Vue flushes the queue and performs the actual (already de-duped) work. Internally Vue tries native <code>Promise.then</code> and <code>MutationObserver</code> for the asynchronous queuing and falls back to <code>setTimeout(fn, 0)</code>.</p>
-<p>For example, when you set <code>vm.someData = &#39;new value&#39;</code>, the component will not re-render immediately. It will update in the next “tick”, when the queue is flushed. Most of the time we don’t need to care about this, but it can be tricky when you want to do something that depends on the post-update DOM state. Although Vue.js generally encourages developers to think in a “data-driven” fashion and avoid touching the DOM directly, sometimes it might be necessary to get your hands dirty. In order to wait until Vue.js has finished updating the DOM after a data change, you can use <code>Vue.nextTick(callback)</code> immediately after the data is changed. The callback will be called after the DOM has been updated. For example:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">message</span>: <span class="string">'123'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">vm.message = <span class="string">'new message'</span> <span class="comment">// change data</span></div><div class="line">vm.$el.textContent === <span class="string">'new message'</span> <span class="comment">// false</span></div><div class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  vm.$el.textContent === <span class="string">'new message'</span> <span class="comment">// true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>There is also the <code>vm.$nextTick()</code> instance method, which is especially handy inside components, because it doesn’t need global <code>Vue</code> and its callback’s <code>this</code> context will be automatically bound to the current Vue instance:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'example'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;span&gt;&#123;&#123; message &#125;&#125;&lt;/span&gt;'</span>,</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">message</span>: <span class="string">'not updated'</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">updateMessage</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.message = <span class="string">'updated'</span></div><div class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.$el.textContent) <span class="comment">// =&gt; 'not updated'</span></div><div class="line">      <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.$el.textContent) <span class="comment">// =&gt; 'updated'</span></div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+    <p>Vue.js allows you to define filters that can be used to apply common text formatting. Filters are usable in two places: <strong>mustache interpolations and <code>v-bind</code> expressions</strong> (the latter supported in 2.1.0+). Filters should be appended to the end of the JavaScript expression, denoted by the “pipe” symbol:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- in mustaches --&gt;</span></div><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- in v-bind --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"rawId | formatId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>The filter function always receives the expression’s value (the result of the former chain) as its first argument. In this example, the <code>capitalize</code> filter function will receive the value of <code>message</code> as its argument.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  filters: &#123;</div><div class="line">    <span class="attr">capitalize</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">      value = value.toString()</div><div class="line">      <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Filters can be chained:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA | filterB &#125;&#125;</div></pre></td></tr></table></figure>
+<p>In this case, <code>filterA</code>, defined with a single argument, will receive the value of <code>message</code>, and then the <code>filterB</code> function will be called with the result of <code>filterA</code> passed into <code>filterB</code>‘s single argument.</p>
+<p>Filters are JavaScript functions, therefore they can take arguments:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA('arg1', arg2) &#125;&#125;</div></pre></td></tr></table></figure>
+<p>Here <code>filterA</code> is defined as a function taking three arguments. The value of <code>message</code> will be passed into the first argument. The plain string <code>&#39;arg1&#39;</code> will be passed into the <code>filterA</code> as its second argument, and the value of expression <code>arg2</code> will be evaluated and passed in as the third argument.</p>
 
     
       <div class="guide-links">
         
-          <span>← <a href="/v2/guide/components.html">Components</a></span>
+          <span>← <a href="/v2/guide/plugins.html">Plugins</a></span>
         
-        
-          <span style="float:right"><a href="/v2/guide/transitions.html">Transition Effects</a> →</span>
         
       </div>
     
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
-      <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/reactivity.md" target="_blank">
+      <a href="https://github.com/vuejs/vuejs.org/blob/master/src/v2/guide/filters.md" target="_blank">
         Edit this page on Github!
       </a>
     </div>
