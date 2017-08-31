@@ -392,8 +392,6 @@
 <p>New in 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment.</p>
 </blockquote>
 </li>
-<li><p><strong>See also:</strong> <a href="../guide/reactivity.html#Async-Update-Queue">Async Update Queue</a></p>
-</li>
 </ul>
 <h3 id="Vue-set">Vue.set( target, key, value )</h3>
 
@@ -409,9 +407,8 @@
 </li>
 <li><p><strong>Usage:</strong></p>
 <p>Set a property on an object. If the object is reactive, ensure the property is created as a reactive property and trigger view updates. This is primarily used to get around the limitation that Vue cannot detect property additions.</p>
-<p><strong>Note the object cannot be a Vue instance, or the root data object of a Vue instance.</strong></p>
-</li>
-<li><p><strong>See also:</strong> <a href="../guide/reactivity.html">Reactivity in Depth</a></p>
+<p class="tip">Note the object cannot be a Vue instance, or the root data object of a Vue instance.</p>
+
 </li>
 </ul>
 <h3 id="Vue-delete">Vue.delete( target, key )</h3>
@@ -429,8 +426,7 @@
 <li><p><strong>Usage:</strong></p>
 <p>Delete a property on an object. If the object is reactive, ensure the deletion triggers view updates. This is primarily used to get around the limitation that Vue cannot detect property deletions, but you should rarely need to use it.</p>
 <p class="tip">The target object cannot be a Vue instance, or the root data object of a Vue instance.</p>
-</li>
-<li><p><strong>See also:</strong> <a href="../guide/reactivity.html">Reactivity in Depth</a></p>
+
 </li>
 </ul>
 <h3 id="Vue-directive">Vue.directive( id, [definition] )</h3>
@@ -548,8 +544,7 @@
 <li><p><strong>Example:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"></div><div class="line"><span class="comment">// direct instance creation</span></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: data</div><div class="line">&#125;)</div><div class="line">vm.a <span class="comment">// =&gt; 1</span></div><div class="line">vm.$data === data <span class="comment">// =&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// must use function when in Vue.extend()</span></div><div class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p class="tip">Note that <strong>you should not use an arrow function with the <code>data</code> property</strong> (e.g. <code>data: () =&gt; { return { a: this.myProp }}</code>). The reason is arrow functions bind the parent context, so <code>this</code> will not be the Vue instance as you expect and <code>this.myProp</code> will be undefined.</p>
-</li>
-<li><p><strong>See also:</strong> <a href="../guide/reactivity.html">Reactivity in Depth</a></p>
+
 </li>
 </ul>
 <h3 id="props"><a href="#props" class="headerlink" title="props"></a>props</h3><ul>
@@ -1298,7 +1293,6 @@
 <li><p><strong>See also:</strong></p>
 <ul>
 <li><a href="#Vue-nextTick">Vue.nextTick</a></li>
-<li><a href="../guide/reactivity.html#Async-Update-Queue">Async Update Queue</a></li>
 </ul>
 </li>
 </ul>
