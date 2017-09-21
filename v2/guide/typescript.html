@@ -85,9 +85,17 @@
     <input type="text" id="search-query-nav" class="search-query st-default-search-input">
   </form>
 </li>
-<li><a href="/v2/guide/" class="nav-link current">Guide</a></li>
-<li><a href="/v2/api/" class="nav-link">API</a></li>
-<li><a href="/v2/examples/" class="nav-link">Examples</a></li>
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">Learn</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="/v2/guide/" class="nav-link current">Guide</a></li>
+      <li><a href="/v2/api/" class="nav-link">API</a></li>
+      <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
+    </ul></li>
+  </ul>
+</li>
+
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">Ecosystem</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -120,6 +128,20 @@
 
 
 
+<li>
+  <a href="/v2/guide/team.html" class="nav-link team">Team</a>
+</li>
+<li class="nav-dropdown-container support-vue">
+  <a class="nav-link">Support Vue</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Shop</a></li>
+      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Support Us on OpenCollective</a></li>
+      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Support Evan on Patreon</a></li>
+    </ul></li>
+  </ul>
+</li>
+
 <li class="nav-dropdown-container language">
   <a class="nav-link">Translations</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -132,9 +154,6 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Shop</a>
-</li>
 
   </ul>
 </div>
@@ -151,9 +170,17 @@
     <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
-<li><a href="/v2/guide/" class="nav-link current">Guide</a></li>
-<li><a href="/v2/api/" class="nav-link">API</a></li>
-<li><a href="/v2/examples/" class="nav-link">Examples</a></li>
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">Learn</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="/v2/guide/" class="nav-link current">Guide</a></li>
+      <li><a href="/v2/api/" class="nav-link">API</a></li>
+      <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
+    </ul></li>
+  </ul>
+</li>
+
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">Ecosystem</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -186,6 +213,20 @@
 
 
 
+<li>
+  <a href="/v2/guide/team.html" class="nav-link team">Team</a>
+</li>
+<li class="nav-dropdown-container support-vue">
+  <a class="nav-link">Support Vue</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Shop</a></li>
+      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Support Us on OpenCollective</a></li>
+      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Support Evan on Patreon</a></li>
+    </ul></li>
+  </ul>
+</li>
+
 <li class="nav-dropdown-container language">
   <a class="nav-link">Translations</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -198,9 +239,6 @@
   </ul>
 </li>
 
-<li>
-  <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Shop</a>
-</li>
 
     </ul>
     <div class="list">
@@ -785,7 +823,7 @@
   <h2 id="Important-2-2-0-Change-Notice-for-TS-webpack-2-users"><a href="#Important-2-2-0-Change-Notice-for-TS-webpack-2-users" class="headerlink" title="Important 2.2.0+ Change Notice for TS + webpack 2 users"></a>Important 2.2.0+ Change Notice for TS + webpack 2 users</h2><p>In Vue 2.2.0+ we introduced dist files exposed as ES modules, which will be used by default by webpack 2. Unfortunately, this introduced an unintentional breaking change because with TypeScript + webpack 2, <code>import Vue = require(&#39;vue&#39;)</code> will now return a synthetic ES module object instead of Vue itself.</p>
 <p>We plan to move all official declarations to use ES-style exports in the future. Please see <a href="#Recommended-Configuration">Recommended Configuration</a> below on a future-proof setup.</p>
 <h2 id="Official-Declaration-in-NPM-Packages"><a href="#Official-Declaration-in-NPM-Packages" class="headerlink" title="Official Declaration in NPM Packages"></a>Official Declaration in NPM Packages</h2><p>A static type system can help prevent many potential runtime errors, especially as applications grow. That’s why Vue ships with <a href="https://github.com/vuejs/vue/tree/dev/types" target="_blank" rel="external">official type declarations</a> for <a href="https://www.typescriptlang.org/" target="_blank" rel="external">TypeScript</a> - not only in Vue core, but also for <a href="https://github.com/vuejs/vue-router/tree/dev/types" target="_blank" rel="external">vue-router</a> and <a href="https://github.com/vuejs/vuex/tree/dev/types" target="_blank" rel="external">vuex</a> as well.</p>
-<p>Since these are <a href="https://unpkg.com/vue/types/" target="_blank" rel="external">published on NPM</a>, and the latest TypeScript knows how to resolve type declarations in NPM packages, this means when installed via NPM, you don’t need any additional tooling to use TypeScript with Vue.</p>
+<p>Since these are <a href="https://cdn.jsdelivr.net/npm/vue/types/" target="_blank" rel="external">published on NPM</a>, and the latest TypeScript knows how to resolve type declarations in NPM packages, this means when installed via NPM, you don’t need any additional tooling to use TypeScript with Vue.</p>
 <h2 id="Recommended-Configuration"><a href="#Recommended-Configuration" class="headerlink" title="Recommended Configuration"></a>Recommended Configuration</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// tsconfig.json</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"compilerOptions"</span>: &#123;</div><div class="line">    <span class="comment">// ... other options omitted</span></div><div class="line">    <span class="string">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>,</div><div class="line">    <span class="string">"lib"</span>: [</div><div class="line">      <span class="string">"dom"</span>,</div><div class="line">      <span class="string">"es5"</span>,</div><div class="line">      <span class="string">"es2015.promise"</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Note the <code>allowSyntheticDefaultImports</code> option allows us to use the following:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div></pre></td></tr></table></figure>
