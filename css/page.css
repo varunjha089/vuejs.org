@@ -412,7 +412,7 @@ body.docs #nav {
   border-bottom: none;
 }
 .nav-dropdown .nav-link.current::after {
-  content: '';
+  content: "";
   width: 0;
   height: 0;
   border-left: 5px solid #42b983;
