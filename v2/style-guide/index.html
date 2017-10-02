@@ -295,8 +295,7 @@
 </blockquote>
 <p>Finally, we’ve split rules into four categories:</p>
 <h2 id="Rule-Categories"><a href="#Rule-Categories" class="headerlink" title="Rule Categories"></a>Rule Categories</h2><h3 id="Priority-A-Essential"><a href="#Priority-A-Essential" class="headerlink" title="Priority A: Essential"></a>Priority A: Essential</h3><p>These rules help prevent errors, so learn and abide by them at all costs. Exceptions may exist, but should be very rare and only be made by those with expert knowledge of both JavaScript and Vue.</p>
-<h3 id="Priority-B-Strongly-Recommended"><a href="#Priority-B-Strongly-Recommended" class="headerlink" title="Priority B: Strongly Recommended"></a>Priority B: Strongly Recommended</h3><p>These rules have been found to vastly improve readability in most projects. If you violate them, your code will still run, but other developers may give you the evil eye <a href="https://github.com/vuejs/roadmap#events" target="_blank" rel="external">at conferences</a>.</p>
-<p><a href="http://futurama.wikia.com/wiki/Template:FOX_Image" target="_blank" rel="external"><img src="https://i.imgur.com/PcOnLxn.jpg" alt="Fry from Futurama glaring"></a></p>
+<h3 id="Priority-B-Strongly-Recommended"><a href="#Priority-B-Strongly-Recommended" class="headerlink" title="Priority B: Strongly Recommended"></a>Priority B: Strongly Recommended</h3><p>These rules have been found to improve readability and/or developer experience in most projects. Your code will still run if you violate them, but violations should be rare and well-justified.</p>
 <h3 id="Priority-C-Recommended"><a href="#Priority-C-Recommended" class="headerlink" title="Priority C: Recommended"></a>Priority C: Recommended</h3><p>Where multiple, equally good options exist, an arbitrary choice can be made to ensure consistency. In these rules, we describe each acceptable option and suggest a default choice. That means you can feel free to make a different choice in your own codebase, as long as you’re consistent and have a good reason. Please do have a good reason though! By adapting to the community standard, you will:</p>
 <ol>
 <li>train your brain to more easily parse most of the community code you encounter</li>
@@ -304,7 +303,6 @@
 <li>often find new hires are already accustomed to your preferred coding style, at least in regards to Vue</li>
 </ol>
 <h3 id="Priority-D-Use-with-Caution"><a href="#Priority-D-Use-with-Caution" class="headerlink" title="Priority D: Use with Caution"></a>Priority D: Use with Caution</h3><p>Some features of Vue exist to accommodate rare edge cases or smoother migrations from a legacy code base. When overused however, they can make your code more difficult to maintain or even become a source of bugs. These rules shine a light on potentially risky features, describing when and why they should be avoided.</p>
-<p><a href="https://xkcd.com/292/" target="_blank" rel="external"><img src="https://imgs.xkcd.com/comics/goto.png" alt="goto from xkcd.com"></a></p>
 <h2 id="Priority-A-Rules-Essential-Error-Prevention"><a href="#Priority-A-Rules-Essential-Error-Prevention" class="headerlink" title="Priority A Rules: Essential (Error Prevention)"></a>Priority A Rules: Essential (Error Prevention)</h2><h3 id="Multi-word-component-names-essential"><a href="#Multi-word-component-names-essential" class="headerlink" title="Multi-word component names essential"></a>Multi-word component names <sup data-p="a">essential</sup></h3><p><strong>Component names should always be multi-word, except for root <code>App</code> components.</strong></p>
 <p>This <a href="http://w3c.github.io/webcomponents/spec/custom/#valid-custom-element-name" target="_blank" rel="external">prevents conflicts</a> with existing and future HTML elements, since all HTML elements are a single word.</p>
 <div class="style-example example-bad">
@@ -539,7 +537,13 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- In DOM templates --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
 </div>
 <h3 id="Component-name-casing-in-templates-strongly-recommended"><a href="#Component-name-casing-in-templates-strongly-recommended" class="headerlink" title="Component name casing in templates strongly recommended"></a>Component name casing in templates <sup data-p="b">strongly recommended</sup></h3><p><strong>Component names should always be PascalCase in <a href="single-file-components.html">single-file components</a> and string templates - but kebab-case in DOM templates.</strong></p>
-<p>PascalCase in templates improves readability, because it’s easier to tell at a glance what’s an element and what’s a component. Unfortunately, PascalCase is invalid for a custom element in HTML, so a DOM template must still use kebab-case.</p>
+<p>PascalCase has a few advantages over kebab-case:</p>
+<ul>
+<li>Editors can autocomplete component names in templates, because PascalCase is also used in JavaScript.</li>
+<li><code>&lt;MyComponent&gt;</code> is more visually distinct from a single-word HTML element than <code>&lt;my-component&gt;</code>, because there are two character differences (the two capitals), rather than just one (a hyphen).</li>
+<li>If you use any non-Vue custom elements in your templates, such as a web component, PascalCase ensures that your Vue components remain distinctly visible.</li>
+</ul>
+<p>Unfortunately, due to HTML’s case insensitivity, DOM templates must still use kebab-case.</p>
 <div class="style-example example-bad">
 <h4 id="Bad-13"><a href="#Bad-13" class="headerlink" title="Bad"></a>Bad</h4><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- In single-file components and string templates --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">mycomponent</span>/&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- In single-file components and string templates --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-component</span>/&gt;</span></div></pre></td></tr></table></figure>
