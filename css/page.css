@@ -1097,6 +1097,12 @@ ul.demo li {
 .style-guide details {
   position: relative;
 }
+.style-guide details:not([open]) summary::after {
+  content: "...";
+}
+.style-guide details:not([open]) summary:hover {
+  background: rgba(255,255,255,0.3);
+}
 .style-guide summary {
   cursor: pointer;
   padding: 1.6em;
