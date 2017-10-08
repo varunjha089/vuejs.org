@@ -491,6 +491,22 @@
 </div>
 <h3 id="Tightly-coupled-component-names-strongly-recommended"><a href="#Tightly-coupled-component-names-strongly-recommended" class="headerlink" title="Tightly coupled component names strongly recommended"></a>Tightly coupled component names <sup data-p="b">strongly recommended</sup></h3><p><strong>Child components that are tightly coupled with their parent should include the parent component name as a prefix.</strong></p>
 <p>If a component only makes sense in the context of a single parent component, that relationship should be evident in its name. Since editors typically organize files alphabetically, this also keeps these related files next to each other.</p>
+
+<details>
+<summary>
+  <h4>Detailed Explanation</h4>
+</summary>
+
+<p>You might be tempted to solve this problem by nesting child components in directories named after their parent. For example:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">components/</div><div class="line">|- TodoList/</div><div class="line">   |- Item/</div><div class="line">      |- index.vue</div><div class="line">      |- Button.vue</div><div class="line">   |- index.vue</div></pre></td></tr></table></figure>
+<p>or:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">components/</div><div class="line">|- TodoList/</div><div class="line">   |- Item/</div><div class="line">      |- Button.vue</div><div class="line">   |- Item.vue</div><div class="line">|- TodoList.vue</div></pre></td></tr></table></figure>
+<p>This isn’t recommended, as it results in:</p>
+<ul>
+<li>Many files with similar names, making rapid file switching in code editors more difficult.</li>
+<li>Many nested sub-directories, which increases the time it takes to browse components in an editor’s sidebar.</li>
+</ul>
+</details>
 <div class="style-example example-bad">
 <h4 id="Bad-10"><a href="#Bad-10" class="headerlink" title="Bad"></a>Bad</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">components/</div><div class="line">|- TodoList.vue</div><div class="line">|- TodoItem.vue</div><div class="line">|- TodoButton.vue</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">components/</div><div class="line">|- SearchSidebar.vue</div><div class="line">|- NavigationForSearchSidebar.vue</div></pre></td></tr></table></figure>
