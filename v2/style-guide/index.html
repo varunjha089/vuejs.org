@@ -593,9 +593,9 @@
 <p>However, for applications that use <strong>only</strong> global component definitions via <code>Vue.component</code>, we recommend kebab-case instead. The reasons are:</p>
 <ul>
 <li>It’s rare that global components are ever referenced in JavaScript, so following a convention for JavaScript makes less sense.</li>
-<li>These applications always include many in-DOM components, where kebab-case <a href="#Component-name-casing-in-templates"><strong>must</strong> be used</a>.</li></ul></details>
-
-
+<li>These applications always include many in-DOM templates, where <a href="#Component-name-casing-in-templates-strongly-recommended">kebab-case <strong>must</strong> be used</a>.</li>
+</ul>
+</details>
 <div class="style-example example-bad">
 <h4 id="Bad-14"><a href="#Bad-14" class="headerlink" title="Bad"></a>Bad</h4><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'myComponent'</span>, &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> myComponent <span class="keyword">from</span> <span class="string">'./MyComponent.vue'</span></div></pre></td></tr></table></figure>
