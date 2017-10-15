@@ -373,7 +373,7 @@
 <li><p><strong>Default:</strong> <code>[]</code></p>
 </li>
 <li><p><strong>Usage:</strong></p>
-<figure class="highlight"><table><tr><td class="code"><pre><div class="line">Vue.config.ignoredElements = [</div><div class="line">  'my-custom-web-component',</div><div class="line">  'another-web-component',</div><div class="line">  // Use a RegExp to ignore all elements that start with "ion-"</div><div class="line">  // 2.5+ only</div><div class="line">  /^ion-/</div><div class="line">]</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><div class="line">Vue.config.ignoredElements = [</div><div class="line">  'my-custom-web-component',</div><div class="line">  'another-web-component',</div><div class="line">  // Use a `RegExp` to ignore all elements that start with "ion-"</div><div class="line">  // 2.5+ only</div><div class="line">  /^ion-/</div><div class="line">]</div></pre></td></tr></table></figure>
 <p>Make Vue ignore custom elements defined outside of Vue (e.g., using the Web Components APIs). Otherwise, it will throw a warning about an <code>Unknown custom element</code>, assuming that you forgot to register a global component or misspelled a component name.</p>
 </li>
 </ul>
